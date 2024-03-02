@@ -9,6 +9,7 @@ lerna-debug.log*
 
 # Env
 .env
+.vscode
 
 node_modules
 dist
