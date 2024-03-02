@@ -8,6 +8,7 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "noImplicitAny": false,
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -18,8 +19,25 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Paths for absolute routing */
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@services/*": ["./src/services/*"],
+      "@stores/*": ["./src/stores/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@validations/*": ["./src/validations/*"]
+    }
   },
-  "include": ["src"],
+  "include": ["src", "eslintrc.cjs"],
+  "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,0 +1,166 @@
+/* Abhaya Libre Font */
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('../fonts/abhaya-libre/AbhayaLibre-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('../fonts/abhaya-libre/AbhayaLibre-Medium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('../fonts/abhaya-libre/AbhayaLibre-SemiBold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('../fonts/abhaya-libre/AbhayaLibre-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('../fonts/abhaya-libre/AbhayaLibre-ExtraBold.ttf') format('ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Be Vietnam Font */
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-Light.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-LightItalic.ttf') format('ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-Italic.ttf') format('ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-Medium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-MediumItalic.ttf') format('ttf');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-SemiBold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-SemiBoldItalic.ttf') format('ttf');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-BoldItalic.ttf') format('ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-ExtraBold.ttf') format('ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Be Vietnam';
+  src: url('../fonts/be-vietnam/BeVietnam-ExtraBoldItalic.ttf') format('ttf');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Manrope Font */
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/manrope/Manrope-Light.otf') format('otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/manrope/Manrope-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/manrope/Manrope-Medium.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/manrope/Manrope-SemiBold.otf') format('otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/manrope/Manrope-Bold.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/manrope/Manrope-ExtraBold.otf') format('otf');
+  font-weight: 800;
+  font-style: normal;
+}
