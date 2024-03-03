@@ -13,59 +13,95 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as DefaultImport } from './routes/_default'
+import { Route as CypherImport } from './routes/_cypher'
+import { Route as ClientImport } from './routes/_client'
 
 // Create Virtual Routes
 
-const HomeLazyImport = createFileRoute('/home')()
-const IndexLazyImport = createFileRoute('/')()
-const CypherDashboardLazyImport = createFileRoute('/cypher/dashboard')()
-const ClientDashboardLazyImport = createFileRoute('/client/dashboard')()
+const DefaultIndexLazyImport = createFileRoute('/_default/')()
+const DefaultHomeLazyImport = createFileRoute('/_default/home')()
+const CypherCypherDashboardLazyImport = createFileRoute(
+  '/_cypher/cypher/dashboard',
+)()
+const ClientClientDashboardLazyImport = createFileRoute(
+  '/_client/client/dashboard',
+)()
 
 // Create/Update Routes
 
-const HomeLazyRoute = HomeLazyImport.update({
-  path: '/home',
+const DefaultRoute = DefaultImport.update({
+  id: '/_default',
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/home.lazy').then((d) => d.Route))
+} as any)
 
-const IndexLazyRoute = IndexLazyImport.update({
+const CypherRoute = CypherImport.update({
+  id: '/_cypher',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ClientRoute = ClientImport.update({
+  id: '/_client',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DefaultIndexLazyRoute = DefaultIndexLazyImport.update({
   path: '/',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
-
-const CypherDashboardLazyRoute = CypherDashboardLazyImport.update({
-  path: '/cypher/dashboard',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => DefaultRoute,
 } as any).lazy(() =>
-  import('./routes/cypher/dashboard.lazy').then((d) => d.Route),
+  import('./routes/_default/index.lazy').then((d) => d.Route),
 )
 
-const ClientDashboardLazyRoute = ClientDashboardLazyImport.update({
-  path: '/client/dashboard',
-  getParentRoute: () => rootRoute,
+const DefaultHomeLazyRoute = DefaultHomeLazyImport.update({
+  path: '/home',
+  getParentRoute: () => DefaultRoute,
+} as any).lazy(() => import('./routes/_default/home.lazy').then((d) => d.Route))
+
+const CypherCypherDashboardLazyRoute = CypherCypherDashboardLazyImport.update({
+  path: '/cypher/dashboard',
+  getParentRoute: () => CypherRoute,
 } as any).lazy(() =>
-  import('./routes/client/dashboard.lazy').then((d) => d.Route),
+  import('./routes/_cypher/cypher/dashboard.lazy').then((d) => d.Route),
+)
+
+const ClientClientDashboardLazyRoute = ClientClientDashboardLazyImport.update({
+  path: '/client/dashboard',
+  getParentRoute: () => ClientRoute,
+} as any).lazy(() =>
+  import('./routes/_client/client/dashboard.lazy').then((d) => d.Route),
 )
 
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      preLoaderRoute: typeof IndexLazyImport
+    '/_client': {
+      preLoaderRoute: typeof ClientImport
       parentRoute: typeof rootRoute
     }
-    '/home': {
-      preLoaderRoute: typeof HomeLazyImport
+    '/_cypher': {
+      preLoaderRoute: typeof CypherImport
       parentRoute: typeof rootRoute
     }
-    '/client/dashboard': {
-      preLoaderRoute: typeof ClientDashboardLazyImport
+    '/_default': {
+      preLoaderRoute: typeof DefaultImport
       parentRoute: typeof rootRoute
     }
-    '/cypher/dashboard': {
-      preLoaderRoute: typeof CypherDashboardLazyImport
-      parentRoute: typeof rootRoute
+    '/_default/home': {
+      preLoaderRoute: typeof DefaultHomeLazyImport
+      parentRoute: typeof DefaultImport
+    }
+    '/_default/': {
+      preLoaderRoute: typeof DefaultIndexLazyImport
+      parentRoute: typeof DefaultImport
+    }
+    '/_client/client/dashboard': {
+      preLoaderRoute: typeof ClientClientDashboardLazyImport
+      parentRoute: typeof ClientImport
+    }
+    '/_cypher/cypher/dashboard': {
+      preLoaderRoute: typeof CypherCypherDashboardLazyImport
+      parentRoute: typeof CypherImport
     }
   }
 }
@@ -73,10 +109,9 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export const routeTree = rootRoute.addChildren([
-  IndexLazyRoute,
-  HomeLazyRoute,
-  ClientDashboardLazyRoute,
-  CypherDashboardLazyRoute,
+  ClientRoute.addChildren([ClientClientDashboardLazyRoute]),
+  CypherRoute.addChildren([CypherCypherDashboardLazyRoute]),
+  DefaultRoute.addChildren([DefaultHomeLazyRoute, DefaultIndexLazyRoute]),
 ])
 
 /* prettier-ignore-end */
