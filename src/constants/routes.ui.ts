@@ -1,4 +1,4 @@
-export const HOME_PAGE = '/home';
+export const HOME_PAGE = '/';
 export const RESET_PASSWORD_PAGE = '/reset-password';
 
 export const CLIENT_ROUTE = '/client';
