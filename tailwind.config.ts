@@ -53,7 +53,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         abhaya: ['Abhaya Libre'],
-        vietnam: ['Be Vietnam'],
+        vietnam: ['Be Vietnam Pro'],
         manrope: ['Manrope'],
       },
     },
