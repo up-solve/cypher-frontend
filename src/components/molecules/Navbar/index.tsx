@@ -68,7 +68,7 @@ const Navbar: FC<NavbarProps> = () => {
               aria-label="menu button"
               className="cursor-pointer"
             >
-              <AiOutlineClose size={28} className="text-gold" />
+              <AiOutlineClose size={28} className="text-black-200" />
             </button>
           </div>
           <div className="flex flex-col gap-4">
