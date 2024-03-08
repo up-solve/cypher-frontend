@@ -1,3 +1,4 @@
-export const TRY_AGAIN = 'Please try again';
-export const GO_DASHBOARD = 'Go to dashboard';
-export const GO_LOGIN = 'Go to login page';
+export const TRY_AGAIN = 'Please Try Again';
+export const GO_DASHBOARD = 'Go to Dashboard';
+export const GO_HOME = 'Go to Home';
+export const GO_LOGIN = 'Go to Login Page';
