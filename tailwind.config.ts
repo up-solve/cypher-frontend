@@ -15,8 +15,9 @@ const config: Config = {
       'black-200': '#171A1F',
       'black-100': '#262626',
       //Grey
-      'grey-300': '#4F709C',
-      'grey-200': '#586886',
+      'grey-400': '#4F709C',
+      'grey-300': '#586886',
+      'grey-200': '#61788A',
       'grey-100': '#656567',
       // Orange
       'orange-400': '#FF9500',
@@ -34,6 +35,8 @@ const config: Config = {
       // Green
       'green-200': '#006604',
       'green-100': '#00AC07',
+      // Border
+      'border-grey': '#DBE0E5',
     },
     boxShadow: {
       // TODO: Add box shadows when creating card components

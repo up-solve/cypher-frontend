@@ -1,6 +1,6 @@
 import { Dropdown } from '@interfaces/DropDown';
-import { CLIENT, CYPHER } from './app';
-import { CLIENT_DASHBOARD, CYPHER_DASHBOARD } from './routes.ui';
+import { CLIENT, CYPHER } from '../app';
+import { CLIENT_DASHBOARD, CYPHER_DASHBOARD } from '../routes.ui';
 
 /* TODO: Change href attributes */
 

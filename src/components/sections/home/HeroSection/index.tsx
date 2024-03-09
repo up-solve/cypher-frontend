@@ -6,7 +6,7 @@ export interface HeroSectionProps {}
 
 const HeroSection: FC<HeroSectionProps> = () => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center py-10">
       <div className="grid grid-col-1 tablet:grid-cols-12 gap-4 py-10">
         <div className="tablet:col-span-5 py-5 flex flex-col gap-6 items-center justify-center tablet:items-start">
           <h1 className="text-3xl text-center text-purple-400 font-abhaya font-extrabold tablet:text-2xl tablet:text-left desktop:text-xxl">

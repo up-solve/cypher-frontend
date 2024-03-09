@@ -9,7 +9,7 @@ import { HOME_PAGE } from '@constants/routes.ui';
 import {
   navbarLoginButton,
   navbarSignupButton,
-} from '@constants/navbarButtons';
+} from '@constants/ui/navbarButtons';
 
 export interface NavbarProps {}
 
