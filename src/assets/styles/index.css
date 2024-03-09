@@ -15,3 +15,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+.fullHeightSection {
+  height: calc(100vh - theme('spacing.24'));
+  max-height: calc(100vh - theme('spacing.24'));
+}

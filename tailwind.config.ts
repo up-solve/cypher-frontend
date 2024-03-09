@@ -48,7 +48,7 @@ const config: Config = {
       '3xl': ['48px', { lineHeight: '56px', letterSpacing: '-0.032em' }],
       '4xl': ['56px', { lineHeight: '64px', letterSpacing: '-0.032em' }],
       '5xl': ['64px', { lineHeight: '80px', letterSpacing: '-0.032em' }],
-      xxl: ['106px', { lineHeight: '80px', letterSpacing: '-0.032em' }],
+      xxl: ['96px', { lineHeight: '100px', letterSpacing: '-0.032em' }],
     },
     extend: {
       fontFamily: {
