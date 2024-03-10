@@ -23,3 +23,23 @@ export const infoCards = [
 ];
 
 export const InfoCards = typeof infoCards;
+
+export const infoImageCards = [
+  {
+    image: '/images/info-image-1.png',
+    description:
+      'Search by skill, experience, and budget to match your project needs with the ideal coder.',
+  },
+  {
+    image: '/images/info-image-2.png',
+    description:
+      'Enjoy secure communication tools and progress tracking for smooth project management.',
+  },
+  {
+    image: '/images/info-image-3.png',
+    description:
+      'Verified profiles, secure payments, and escrow options safeguard your project and investment.',
+  },
+];
+
+export const InfoImageCards = typeof infoImageCards;

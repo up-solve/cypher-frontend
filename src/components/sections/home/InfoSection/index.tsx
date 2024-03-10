@@ -1,7 +1,9 @@
 import { FC } from 'react';
 
 import InfoCard from '@components/molecules/InfoCard';
-import { infoCards } from '@constants/ui/infoSectionDetails';
+import InfoImageCard from '@components/molecules/InfoImageCard';
+
+import { infoCards, infoImageCards } from '@constants/ui/infoSectionDetails';
 
 export interface InfoSectionProps {}
 
@@ -26,6 +28,19 @@ const InfoSection: FC<InfoSectionProps> = () => {
                 title={infoCard.title}
                 content={infoCard.description}
                 icon={<infoCard.icon />}
+              />
+            </div>
+          ))}
+        </div>
+        <h2 className="pt-8 text-center font-abhaya text-2xl text-purple-400 font-extrabold tablet:text-left tablet:text-lg desktop:text-2xl">
+          The premier platform connecting with verified freelance coders
+        </h2>
+        <div className="py-4 px-4 grid grid-cols-1 gap-10 tablet:px-1 tablet:grid-cols-3 tablet:gap-10 desktop:gap-32">
+          {infoImageCards.map((infoImageCard) => (
+            <div key={infoImageCard.image} className="col-span-1">
+              <InfoImageCard
+                image={infoImageCard.image}
+                content={infoImageCard.description}
               />
             </div>
           ))}
